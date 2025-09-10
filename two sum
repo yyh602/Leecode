@@ -1,8 +1,8 @@
-"題目：Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+"題目：給定一個整數數組nums 和一個整數target，傳回兩個數字的索引，使得它們加起來等於target。
 
-You may assume that each input would have exactly one solution, and you may not use the same element twice.
+您可以假設每個輸入只有一個解決方案，並且您可能不會兩次使用相同的元素。
 
-You can return the answer in any order."
+您可以按任意順序返回答案。"
 
 
 
