@@ -1,4 +1,4 @@
-
+#解答1
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
 
@@ -36,3 +36,25 @@ class Solution:
         result = dummyHead.next  #迴圈結束後，dummyHead 的下一個節點就是我們結果鏈結串列的開頭
         dummyHead.next = None    #這一步不是必須的，但可以斷開 dummyHead 與結果鏈結串列的連接，釋放記憶體
         return result            #返回最終的結果鏈結串列
+
+
+
+#解答 2
+class Solution:
+    def addTwoNumbers(
+        self, l1: Optional[ListNode], l2: Optional[ListNode]
+    ) -> Optional[ListNode]:
+        dummyHead = ListNode(0)
+        curr = dummyHead
+        carry = 0
+        while l1 != None or l2 != None or carry != 0:
+            l1Val = l1.val if l1 else 0
+            l2Val = l2.val if l2 else 0
+            columnSum = l1Val + l2Val + carry
+            carry = columnSum // 10
+            newNode = ListNode(columnSum % 10)
+            curr.next = newNode
+            curr = newNode
+            l1 = l1.next if l1 else None
+            l2 = l2.next if l2 else None
+        return dummyHead.next
