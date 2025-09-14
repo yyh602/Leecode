@@ -1,4 +1,4 @@
-#暴力破解法
+//暴力破解法
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         int n = nums.length;
