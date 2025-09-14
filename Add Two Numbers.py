@@ -1,18 +1,18 @@
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
 
-        #建立一個假頭節點。這個節點本身不包含在最終結果中，只作為新鏈結串列的起點
-        dummyHead = ListNode(0)
-        #tail 是一個尾部指針，始終指向結果鏈結串列的最後一個節點，方便我們連接新節點
-        tail = dummyHead
-        #初始化進位變數，用於儲存相加後可能產生的進位
-        carry = 0
+        
+        dummyHead = ListNode(0)    #建立一個假頭節點。這個節點本身不包含在最終結果中，只作為新鏈結串列的起點
+       
+        tail = dummyHead          #tail 是一個尾部指針，始終指向結果鏈結串列的最後一個節點，方便我們連接新節點
+     
+        carry = 0         #初始化進位變數，用於儲存相加後可能產生的進位
 
-        #迴圈會持續執行，直到兩個輸入鏈結串列都遍歷完畢（l1 和 l2 都為 None），且進位變數 carry 為 0
-        while l1 is not None or l2 is not None or carry != 0:
+        
+        while l1 is not None or l2 is not None or carry != 0:         #迴圈會持續執行，直到兩個輸入鏈結串列都遍歷完畢（l1 和 l2 都為 None），且進位變數 carry 為 0
 
-            #使用條件表達式，如果 l1 存在，則取它的值；否則取 0。l2 同上
-            #這優雅地處理了兩個鏈結串列長度不一致的情況
+           															  #使用條件表達式，如果 l1 存在，則取它的值；否則取 0。l2 同上
+            														  #這優雅地處理了兩個鏈結串列長度不一致的情況
             digit1 = l1.val if l1 is not None else 0
             digit2 = l2.val if l2 is not None else 0
 
