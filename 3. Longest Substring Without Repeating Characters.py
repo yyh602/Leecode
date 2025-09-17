@@ -1,4 +1,3 @@
-#方法1 - Set
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         n = len(s)
