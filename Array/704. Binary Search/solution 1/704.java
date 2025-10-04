@@ -1,5 +1,9 @@
 // 解法1：左閉右閉
 
+// Time Complexity：O(log n)
+
+// Space Complexity：O(1)
+
 class Solution {
     public int search(int[] nums, int target) {
         if(target < nums[0] || target > nums[nums.length -1]){
